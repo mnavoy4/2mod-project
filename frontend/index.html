@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Sign in</title>
+  <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+<div id="big-container" class="container">
+  <header>
+    <h1>Sign In</h1>
+  </header>
+
+  <main>
+    <div>
+      <form id="login-form" method="GET" action="http://localhost:3001/create-review-x.html">
+        <input type="text" name="username" id="username-field" placeholder="Username">
+        <input type="password" name="password" id="password-field" placeholder="Password">
+        <input class="btn btn-outline-primary btn-sm" type="submit" value="Login" id="login-form-submit">
+      </form>
+    </div>
+    <div>
+      <h2>Create New User</h2>
+      <form action="http://localhost:3000/users" method="POST" id="create-user-form">
+        <input type="text" name="username" id="new-username" placeholder="New Username">
+        <input type="password" name="password" id="new-password" placeholder="New Password">
+        <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+        <input class="btn btn-outline-success btn-sm" type="submit" value="Create User" id="new-user-form-submit">
+      </form>
+    </div>
+  </main>
+  </div>
+</body>
+</html>

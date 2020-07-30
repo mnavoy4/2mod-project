@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interlocutors &mdash; Create a review</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="crx.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <script defer src="create-review.js"></script>  
+</head>
+<body>
+    <header>
+        <ul id="social-media">
+            <li><img src="img/icons8-facebook-30-square.png" width=24px height=24px alt="Facebook" title="Interlocutors on Facebook"></li>
+            <li><img src="img/icons8-twitter-squared-30.png" width=24px height=24px alt="Twitter" title="Interlocutors on Twitter"></li>
+        </ul>
+        <form action="/" id="logout-btn">
+            <button type="submit">Logout</button>
+        </form>
+        <div class="clear"></div> <!-- /.clear -->
+    </header>
+    <div id="page-wrap">
+        <h1>Interlocutors</h1>
+        <nav>
+           <ul id="nav-list">
+               <!-- <li>Write a review</li> -->
+                <li>
+                    <form class="inline" action="http://localhost:3001/create-review.html" method="GET">
+                        <input type="hidden" id="hiddenUsername3" name="username" value="">
+                        <input type="submit" value="Write review">
+                    </form>
+                </li>
+                <!-- <li>See my reviews</li> -->
+                <li>
+                    <form class="inline" action="http://localhost:3001/see-reviews.html" method="GET">
+                        <input type="hidden" id="hiddenUsername2" name="username" value="">
+                        <input type="submit" value="See my reviews">
+                    </form>
+                </li>
+              <li><a href="/browse-quotes.html">Browse all quotes</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/donate.html">Donate</a></li>
+              <li><a href="/contact.html">Contact</a></li> 
+           </ul> 
+        </nav>
+        <main>
+            <h2>Write a review</h2>
+            <div id="quote">
+                <h3>Quotation</h3>
+            </div>
+            <div>
+                <h4>Please rate this quote</h4>
+                
+                <form id="review-form" method="POST" action="http://localhost:3000/reviews">
+                    <input id="1" type="radio" name="rating" value="1" checked>
+                    <label for="1">1</label>
+          
+                    <input id="2" type="radio" name="rating" value="2">
+                    <label for="2">2</label>
+          
+                    <input id="3" type="radio" name="rating" value="3">
+                    <label for="3">3</label>
+          
+                    <input id="4" type="radio" name="rating" value="4">
+                    <label for="4">4</label>
+          
+                    <input id="5" type="radio" name="rating" value="5">
+                    <label for="5">5</label>
+                    <br>
+                    <br>
+          
+                    <label for="user_review">Please write a review</label>
+                   
+                    <textarea name="user_review" id="user_review"></textarea>
+                   
+                    <input id="hiddenUsername" type="hidden" name="username" value="">
+                    <input id="hiddenQuoteId" type="hidden" name="quote" value="">
+                    
+                    <input type="submit" value="Submit Review">
+                </form>
+            </div>
+        </main>
+    </div> <!-- /#page-wrap-->
+</body>
+</html>
