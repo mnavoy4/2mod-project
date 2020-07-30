@@ -23,6 +23,6 @@ class ReviewsController < ApplicationController
       user_id: user.id,
       quote_id: params[:quote]
     })
-    redirect_to "http://localhost:3001/create-review.html?username=#{params[:username]}"
+    redirect_to "http://localhost:3001/create-review-x.html?username=#{params[:username]}"
   end
 end
