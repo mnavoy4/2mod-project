@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interlocutors &mdash; Create a review</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="crx.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <script defer src="see-all-quotes.js"></script>  
+</head>
+<body>
+    <header>
+        <ul id="social-media">
+            <li><img src="img/icons8-facebook-30-square.png" width=24px height=24px alt="Facebook" title="Interlocutors on Facebook"></li>
+            <li><img src="img/icons8-twitter-squared-30.png" width=24px height=24px alt="Twitter" title="Interlocutors on Twitter"></li>
+        </ul>
+        <form action="/" id="logout-btn">
+            <button type="submit">Logout</button>
+        </form>
+        <div class="clear"></div>
+    </header>
+    <div id="page-wrap">
+        <h1>Interlocutors</h1>
+        <nav>
+          <ul id="nav-list">
+                <li>
+                    <form class="inline" action="http://localhost:3001/create-review-x.html" method="GET">
+                        <input type="hidden" id="hiddenUsername3" name="username" value="">
+                        <input type="submit" class="btn" value="Write Review">
+                    </form>
+                </li>
+                <li>
+                    <form class="inline" action="http://localhost:3001/see-reviews-x.html" method="GET">
+                        <input type="hidden" id="hiddenUsername2" name="username" value="">
+                        <input type="submit" class="btn" value="See My Reviews">
+                    </form>
+                </li>
+                <li>
+                  <form class="inline" action="http://localhost:3001/see-all-quotes.html" method="GET">
+                      <input type="hidden" id="hiddenUsername4" name="username" value="">
+                      <input type="submit" class="btn" value="Browse all quotes">
+                  </form>
+                </li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/donate.html">Donate</a></li>
+          </ul> 
+        </nav>
+        <main>
+            <h2>Quotations</h2>
+            <div id="all-quotes">
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

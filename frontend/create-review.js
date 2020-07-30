@@ -6,9 +6,11 @@ const hiddenUsername = document.querySelector("#hiddenUsername");
 const hiddenQuoteId = document.querySelector("#hiddenQuoteId");
 const hiddenUsername2 = document.querySelector("#hiddenUsername2");
 const hiddenUsername3 = document.querySelector("#hiddenUsername3");
+const hiddenUsername4 = document.querySelector("#hiddenUsername4");
 hiddenUsername.value = username;
 hiddenUsername2.value = username;
 hiddenUsername3.value = username;
+hiddenUsername4.value = username;
 const link = document.querySelector("#link-to-reviews");
 
 function fetchRandomQuote(){

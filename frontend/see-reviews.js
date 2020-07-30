@@ -4,8 +4,10 @@ const username = searchParams.get("username");
 let reviewsURL = "http://localhost:3000/reviews";
 const hiddenUsername2 = document.querySelector("#hiddenUsername2");
 const hiddenUsername3 = document.querySelector("#hiddenUsername3");
+const hiddenUsername4 = document.querySelector("#hiddenUsername4");
 hiddenUsername2.value = username;
 hiddenUsername3.value = username;
+hiddenUsername4.value = username;
 
 function fetchReviews(){
   fetch(reviewsURL)
